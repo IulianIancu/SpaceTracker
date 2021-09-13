@@ -36,6 +36,10 @@ class MainFragment : Fragment() {
         super.onDestroy()
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getLatestLaunches()
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -46,7 +50,11 @@ class MainFragment : Fragment() {
             this,
             MainViewModelFactory(weatherRepository)
         ).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        viewModel.state.observe(viewLifecycleOwner, ::onStateChange)
     }
 
+    private fun onStateChange(state: State?) {
+        //TODO use the state for something
+    }
 }
