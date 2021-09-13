@@ -63,7 +63,7 @@ data class Result(
     val date_utc: String,
     @Expose
     @SerializedName("date_unix")
-    val date_unix: Int,
+    val date_unix: Long,
     @Expose
     @SerializedName("date_local")
     val date_local: String,
