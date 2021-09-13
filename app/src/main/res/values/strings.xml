@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Space Tracker</string>
+    <string name="falcon_9_launches">Falcon 9 Launches</string>
+    <string name="mission_success">Mission Success:</string>
+    <string name="error_network">Could not connect to the Internet. Try again later</string>
+    <string name="error_unknown">Unknown Error. Could not load data</string>
+</resources>
