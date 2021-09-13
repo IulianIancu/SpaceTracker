@@ -9,7 +9,7 @@ import retrofit2.http.GET
 interface SpaceTrackerService {
 
     @GET("latest")
-    suspend fun getWeatherForLocation(): Response<Result>
+    suspend fun getLatestLaunches(): Response<Result>
 
     companion object {
         var retrofitService: SpaceTrackerService? = null
